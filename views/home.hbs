@@ -1,0 +1,69 @@
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="/app.css">
+</head>
+
+<body>
+    <div class="flex-container">
+    <div class="container">
+        <h2>Have you gone as far as you can?</h2>
+        <h2>Do you know all the code you need to know?</h2>
+        <h1>JOIN US</h1>
+        <p class="lead">Enter your name to join <strong>{{ count }}</strong> others on our new developer stream waitlist.</p>
+        <a href="#requirements"><i id="downArrow" class="fas fa-angle-double-down"></i></a>
+    </div>
+
+    <div id="requirements" class="requirements-container">
+        <div class="requirements-item">
+            <div class="flexRow blueBG">
+                <i class="fab fa-html5"></i>
+                <i class="fab fa-css3-alt"></i>
+            </div>
+            <h2>You know HTML & CSS</h2>
+            <p>You remember all the great front end stuff you learned in Milestone 1 and 2.  Brush up on your Flexbox!</p> 
+        </div>
+        <div class="requirements-item">
+            <div class="flexRow blueBG">
+                <i class="fab fa-js"></i>
+            </div>
+            <h2>Finished Milestone 3</h2>
+            <p>You've completed UCode Milestone 3 and have a solid grasp of Javascript basics like DOM manipulation.</p> 
+        </div>
+
+        <div class="requirements-item">
+            <div class="flexRow blueBG">
+                <i class="fas fa-rocket"></i>
+            </div>
+            <h2>Spirit of Adventure!</h2>
+            <p>You will be test pilots in an entirely new UCode program.  We are going beyond the bounds of all the current milestones!</p> 
+        </div>
+    </div>
+    <div>
+        <form>
+            <div>
+                <input type="text" class="form" id="studentName" placeholder="Enter Your Full Name">
+            </div>
+            <div>
+                <input type="text" class="form" id="studentEmail" placeholder="Enter Your Email">
+            </div>
+            <section id="locationDrop">
+            <label class="scheduleLabel">Location</label>
+            <div class="dropdown">
+                <button type="button" id="displayLocation" name="location" value="ManhattanBeach" class="dropbtn">Manhattan Beach</button>
+                <div id="location" class="dropdown-content">
+                    <a value="ManhattanBeach" onclick="changeLocation(event)">Manhattan Beach</a>
+                    <a value="Torrance" onclick="changeLocation(event)">Torrance</a>
+                    <a value="Tustin" onclick="changeLocation(event)">Tustin</a>
+                    <a value="LaCanada" onclick="changeLocation(event)">La Canada</a>
+                    <a value="Ithaca" onclick="changeLocation(event)">Ithaca</a>
+                </div>
+            </div>
+            </section>
+            <p id="registrationMsg">Registration submitted successfully</p>
+            <button type="button" id="joinBtn">Join Now</button>
+        </form>
+    </div>
+</div>
+<script src="input.js"></script>
+</body>
